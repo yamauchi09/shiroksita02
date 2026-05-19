@@ -29,9 +29,7 @@ function displayResults(list) {
     div.className = 'result';
 
     div.innerHTML = `
-      <a href="entry.html?file=${word.file}">
-        <h3>${word.word}</h3>
-      </a>
+      <h3>${word.word}</h3>
       <p>${word.meaning}</p>
       <small>${word.pos}</small>
     `;
