@@ -26,12 +26,9 @@ function displayResults(list) {
 
   list.forEach(word => {
     const div = document.createElement('div');
-    div.className = 'result';
-
     div.innerHTML = `
       <h3>${word.word}</h3>
       <p>${word.meaning}</p>
-      <small>${word.pos}</small>
     `;
 
     results.appendChild(div);
