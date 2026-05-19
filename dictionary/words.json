@@ -1,14 +1,12 @@
 [
   {
-    "word": "alen",
-    "meaning": "光",
+    "word": "bona",
+    "meaning": "善",
     "pos": "名詞",
-    "file": "words/alen.md"
   },
   {
-    "word": "sura",
-    "meaning": "見る",
-    "pos": "動詞",
-    "file": "words/sura.md"
+    "word": "chapa",
+    "meaning": "取得、（自力の）達成",
+    "pos": "名詞",
   }
 ]
