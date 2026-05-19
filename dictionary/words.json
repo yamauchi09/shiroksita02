@@ -1,1 +1,14 @@
-
+[
+  {
+    "word": "alen",
+    "meaning": "光",
+    "pos": "名詞",
+    "file": "words/alen.md"
+  },
+  {
+    "word": "sura",
+    "meaning": "見る",
+    "pos": "動詞",
+    "file": "words/sura.md"
+  }
+]
