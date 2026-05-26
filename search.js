@@ -1,36 +1,27 @@
-let words = [];
+let dictionary = [];
 
 fetch('./words.json')
   .then(response => response.json())
   .then(data => {
-    words = data;
-    displayResults(words);
+    dictionary = data;
+    console.log('辞書読み込み成功', dictionary);
+  })
+  .catch(error => {
+    console.error('JSON読み込み失敗', error);
   });
 
-const searchBox = document.getElementById('searchBox');
-const results = document.getElementById('results');
+function searchWord() {
+  const input = document.getElementById('searchBox').value;
 
-searchBox.addEventListener('input', () => {
-  const query = searchBox.value.toLowerCase();
-
-  const filtered = words.filter(word =>
-    word.word.toLowerCase().includes(query) ||
-    word.meaning.includes(query)
+  const result = dictionary.find(
+    item => item.word === input
   );
 
-  displayResults(filtered);
-});
+  const output = document.getElementById('result');
 
-function displayResults(list) {
-  results.innerHTML = '';
-
-  list.forEach(word => {
-    const div = document.createElement('div');
-    div.innerHTML = `
-      <h3>${word.word}</h3>
-      <p>${word.meaning}</p>
-    `;
-
-    results.appendChild(div);
-  });
+  if (result) {
+    output.textContent = result.meaning;
+  } else {
+    output.textContent = '見つかりません';
+  }
 }
