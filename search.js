@@ -1,6 +1,6 @@
 let words = [];
 
-fetch('words.json')
+fetch('./words.json')
   .then(response => response.json())
   .then(data => {
     words = data;
